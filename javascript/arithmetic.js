@@ -1,3 +1,4 @@
+ import setResponseForm from './response.js';
 
 /**
 * @param {number} numberA primer numero para calcular la operación
@@ -5,32 +6,33 @@
 * @descriptor Cada descriptor que añadamos irá en una línea independiente.
 */
 
+
 const arithmeticOperations = function (numberA, numberB) {
 	this.numberA = numberA;
 	this.numberB = numberB;
 	this.printResult = function() {
-		console.log(this.result);
+		return this.result;
 	}
 }
 
 arithmeticOperations.prototype.adition = function () {
 	this.result = this.numberA + this.numberB;
-	this.printResult()
+	return this.printResult()
 }
 
 arithmeticOperations.prototype.substract = function () {
 	this.result = this.numberA - this.numberB
-	this.printResult()
+	return this.printResult()
 }
 
 arithmeticOperations.prototype.multiply = function () {
 	this.result = this.numberA * this.numberB
-	this.printResult()
+	return this.printResult()
 }
 
 arithmeticOperations.prototype.divide = function () {
 	this.result = this.numberA / this.numberB
-	this.printResult()
+	return this.printResult()
 }
 
 
@@ -42,30 +44,42 @@ arithmeticOperations.prototype.divide = function () {
 */
 
 function calculationOperation (firstNumber, secondNumber, operator) {
-	const operation = new arithmeticOperations(a,b);
+	const operation = new arithmeticOperations(firstNumber, secondNumber);
 
 	if (/^\+|^sumar$|^adition$/.test(operator)) {
 
-		operation.adition(firstNumber, secondNumber)
+		return operation.adition(firstNumber, secondNumber)
 
 	} else if (/^\-|substract|restar|menos/.test(operator)) {
 
-		operation.substract(firstNumber, secondNumber)
+		return operation.substract(firstNumber, secondNumber)
 		
 	} else if (/^\*|multiply|multiplicar|x|X/.test(operator)) {
 
-		operation.multiply(firstNumber, secondNumber)
+		return operation.multiply(firstNumber, secondNumber)
 		
 	} else if (/^\/|^divide$|^dividir$/.test(operator)) {
 
-		operation.divide(firstNumber, secondNumber)
+		return operation.divide(firstNumber, secondNumber)
 
 	} else{
 
-		console.log('try again');
+		return 'try again';
 
 	}
 
 }
 
- export default calculationOperation;
+function getDataForm3 () {
+
+	let numbera = parseFloat(document.getElementById('a3').value);
+	let numberb = parseFloat(document.getElementById('b3').value);
+	let operator = document.getElementById('operador').value;
+	let response = calculationOperation(numbera, numberb, operator);
+
+	setResponseForm(response)
+
+}
+
+
+ export default getDataForm3;

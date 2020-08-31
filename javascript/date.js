@@ -1,3 +1,5 @@
+import setResponseForm from './response.js';
+
 /**
 * Con un poco de lo aprendido en el curso de algoritmos
 * decidi dividir en dos el switch case para hacer más
@@ -5,6 +7,7 @@
 * @param {number} number find out what month month belongs to that number
 * @descriptor function give me a number > 0 and < 12 and I tell you what month is.
 */
+
 
 function findMonth(number) {
   const verify = Number.isInteger(number);
@@ -14,50 +17,57 @@ function findMonth(number) {
       console.log(verify);
       switch (number) {
         case 1:
-          console.log('the month is January');
+         return 'the month is January';
           break;
         case 2:
-          console.log('the month is February');
+         return 'the month is February';
           break;
         case 3:
-          console.log('the month is March');
+         return 'the month is March';
           break;
         case 4:
-          console.log('the month is April');
+         return 'the month is April';
           break;
         case 5:
-          console.log('the month is May');
+         return 'the month is May';
           break;
         default:
-          console.log('the month is June');
+         return 'the month is June';
           break;
       }
     } else {
       switch (number) {
         case 7:
-          console.log('the month is July');
+         return 'the month is July';
           break;
         case 8:
-          console.log('the month is August');
+         return 'the month is August';
           break;
         case 9:
-          console.log('the month is september');
+         return 'the month is september';
           break;
         case 10:
-          console.log('the month is October');
+         return 'the month is October';
           break;
         case 11:
-          console.log('the month is November');
+         return 'the month is November';
           break;
 
         default:
-          console.log('the month is December');
+         return 'the month is December';
           break;
       }
     }
   } else {
-    console.log('this is not a valid number, please try again');
+   return 'this is not a valid number, please try again';
   }
 }
 
-findMonth(127);
+function getDataForm2 () {
+  let data = parseInt(document.getElementById('a2').value)
+  let result =findMonth(data);
+  setResponseForm(result)
+  console.log(data);
+}
+
+export default getDataForm2;

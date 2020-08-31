@@ -51,6 +51,16 @@ body{
   background-color: var(--background-color);
 }
 
+.form--btn__main{
+  border: transparent;
+  box-shadow: 2px 4px 7px 0px #bfbfbf, -5px -2px 8px 3px white;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 5px;
+  background-color: grey;
+  color: white;
+}
+
 .form--btn:hover{
   background-color: rgb(197, 197, 197);
   color: white;

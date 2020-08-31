@@ -1,3 +1,5 @@
+import setResponseForm from "./response.js";
+
 let arrayNumbers = [];
 
 /**
@@ -28,15 +30,30 @@ function mayorNumber() {
   let sortArrayNumber = bubbleSort(arrayNumbers)
   let result = sortArrayNumber[sortArrayNumber.length-1]
   console.log(result);
-  return result;
+  setResponseForm(result)
 }
 
-function addNumberArray (number){
-  const verify = Number.isInteger(number);
+/**
+ * 
+ * @param {number} number add this number to arrayNumbers
+ */
+function addNumberArray (){
+  let getData = document.getElementById('a4');
+  let getDataValue = document.getElementById('a4').value;
+  let dataArray = document.getElementById('dataArray');
 
+
+  getDataValue = parseInt(getDataValue)
+  
+  const verify = Number.isInteger(getDataValue);
+  
   if (verify) {
-    arrayNumbers.push(number);
+    arrayNumbers.push(getDataValue);
+    getData.value = "";
+    dataArray.innerHTML = arrayNumbers.toString()
+    console.log(getData.value);
   };
-
+  
 }
 
+export {addNumberArray, mayorNumber}

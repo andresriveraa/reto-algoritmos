@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
   <nav>
     <ul id="menu">
@@ -18,36 +20,82 @@
     </ul>
   </nav>
   <main class="app">
+    <!-- challenge 1 -->
     <div class=" show" id="form1">
       <p>Dame dos numeros y te daré el promedio</p>
-      <input id="a1" type="number" class="form--input"
-      placeholder="Number 1">
-      <input id="b1" type="number" class="form--input"
-      placeholder="Number 2">
-      <button id="button1" class="form--btn">Calculate</button>
+
+      <input id="a1" type="number" class="form--input" placeholder="Number 1">
+
+      <input id="b1" type="number" class="form--input" placeholder="Number 2">
+
+      <button id="button1" class="form--btn">
+        Calculate
+      </button>
     </div>
+
+    <!-- challenge 2 -->
     <div class=" hide" id="form2">
-      <input id="a2" type="number" class="form--input"
-      placeholder="Number1">
-      <input id="b2" type="number" class="form--input"
-      placeholder="Number2">
-      <input id="operator2" type="text" class="form--input">
-      <button class="form--btn">Calculate</button>
+      <p>
+        número entero y muestre el
+        nombre del mes correspondiente.
+        <br> Ejemplo: Enero = 1.
+      </p>
+
+      <input id="a2" type="number" class="form--input" placeholder="Number1">
+
+      <button id="button2" class="form--btn">Calculate</button>
     </div>
+
+    <!-- cahllenge 3 -->
     <div class="hide" id="form3">
-      <input id="a3" type="number" class="form--input"
-      placeholder="Number1">
-      <input id="b3" type="number" class="form--input"
-      placeholder="Number3">
-      <input id="operato3r" type="text" class="form--input">
-      <button class="form--btn">Calculate</button>
+      <p>
+        2 numeros enteros y un operador aritmetico
+        y te dare el resultado de la <br>
+        operacion correspondiente.
+      </p>
+      <input id="a3" type="number" class="form--input" placeholder="Number1">
+      <input id="b3" type="number" class="form--input" placeholder="Number3">
+      <input id="operador" type="text" class="form--input">
+      <button id="button3" class="form--btn">Calculate</button>
+    </div>
+
+    <!-- cahllenge 4 -->
+    <div class="hide" id="form4">
+      <p>
+        Dame 3 números enteros diferentes entre <br>
+        sí y determinaré el número mayor de los tres. <br>
+        valores:
+      </p>
+      <p id="dataArray"> </p>
+      <input id="a4" type="number" class="form--input" placeholder="Number">
+      <button id="buttonAdd" class="form--btn">Add number</button>
+
+      <button id="button4" class="form--btn__main">Calculate</button>
+    </div>
+
+    <!-- cahllenge 5 -->
+    <div class="hide" id="form5">
+      <p>
+        Obten el promedio de un
+        estudiante a <br> partir de sus tres
+        notas parciales. <br>
+        <b>Notas:</b>  
+      </p>
+
+      <p id="dataArray5"> </p>
+      <input id="a5" type="number" class="form--input" placeholder="Number">
+      <button id="buttonAdd5" class="form--btn">Add number</button>
+
+      <button id="button5" class="form--btn__main">Calculate</button>
     </div>
 
     <div class="modal">
       <h1>Tu respuesta:</h1>
       <p id="response"></p>
     </div>
+
   </main>
   <script type="module" src="./javascript/index.js"></script>
 </body>
+
 </html>

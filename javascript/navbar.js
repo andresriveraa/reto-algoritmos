@@ -1,4 +1,4 @@
-import setResponseForm from './response.js'
+import setResponseForm from './response.js';
 
 let actualShowForm = 1;
 
@@ -8,7 +8,6 @@ export const showThisForm = (numberForm) => {
     actualForm.classList.remove('hide');
     actualForm.classList.add('show');
     hideThisForm()
-    console.log( 'diferente',actualShowForm);
   } 
   actualShowForm = numberForm;
   setResponseForm(0)

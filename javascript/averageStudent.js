@@ -1,3 +1,5 @@
+import setResponseForm from "./response.js";
+
 let arrayQualifications = [];
 
 
@@ -8,21 +10,26 @@ let arrayQualifications = [];
 * @descriptor Cada descriptor que añadamos irá en una línea independiente.
 */
 
-function averageQualifications (qualification) {
+function averageQualifications () {
   const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
-  let finalQualification = qualification.reduce(reducer) / qualification.length;
-
-  return finalQualification;
-
-}
-
-function addNumberArray (number){
-  const verify = Number.isInteger(number);
-
-  if (verify) {
-    arrayNumbers.push(arrayQualifications);
-  };
+  let finalQualification = arrayQualifications.reduce(reducer) / arrayQualifications.length;
+  console.log(arrayQualifications.reduce(reducer));
+ setResponseForm(finalQualification)
 
 }
 
+function addNumberArray5 (){
+  let getData = document.getElementById('a5');
+  let getDataValue = getData.value;
+  let dataArray = document.getElementById('dataArray5');
+  
+  getDataValue = parseFloat(getDataValue)
+  
+  arrayQualifications.push(getDataValue);
+  getData.value = "";
+  dataArray.innerHTML = arrayQualifications.toString()
+
+}
+
+export { addNumberArray5, averageQualifications}
