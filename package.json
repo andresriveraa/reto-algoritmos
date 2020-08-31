@@ -1,0 +1,23 @@
+{
+  "name": "reto-algoritmo",
+  "version": "1.0.0",
+  "description": "challenge course algoritms",
+  "main": "index.js",
+  "scripts": {
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/circuandante/reto-algoritmos.git"
+  },
+  "keywords": [
+    "algoritms",
+    "basic"
+  ],
+  "author": "circuandante",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/circuandante/reto-algoritmos/issues"
+  },
+  "homepage": "https://github.com/circuandante/reto-algoritmos#readme"
+}
