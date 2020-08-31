@@ -1,13 +1,21 @@
-const input = document.getElementById('form');
+import setResponseForm from './response.js'
 
-async function NavBar (n){
-  let i = 0;
-  
-  do {
-    const item = document.createElement('input')
-    input.appendChild(item)
-    i++
-  } while (i < n);
+let actualShowForm = 1;
+
+export const showThisForm = (numberForm) => {
+  let actualForm = document.getElementById(`form${numberForm}`);
+  if (!actualForm.classList.contains('show')){
+    actualForm.classList.remove('hide');
+    actualForm.classList.add('show');
+    hideThisForm()
+    console.log( 'diferente',actualShowForm);
+  } 
+  actualShowForm = numberForm;
+  setResponseForm(0)
 }
 
-export default NavBar;
+export const hideThisForm = () => {
+  let actualForm = document.getElementById(`form${actualShowForm}`);
+  actualForm.classList.add('hide');
+  actualForm.classList.remove('show');
+}

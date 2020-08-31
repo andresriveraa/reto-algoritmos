@@ -1,15 +1,17 @@
+import setResponseForm from './response.js'
 
-// function to find average of two numbers
+/**
+* utilizo la funcion isNaN y no Number.isInteger 
+*	para aprovechar 
+*	la coerciòn de isNaN asì si el usuario ingresa un numero 
+*	en texto aùn así puede sacar el promedio.
+* @param {number} numberA primer numero para calcular la operación
+* @param {number} numberB segundo numero para calcular la operación
+* @descriptor function to find average of two numbers.
+*/
+
+
 function average(a, b) {
-
-	/*------------------*\
-
-	utilizo la funcion isNaN y no Number.isInteger 
-	para aprovechar 
-	la coerciòn de isNaN asì si el usuario ingresa un numero 
-	en texto aùn así puede sacar el promedio.
-
-	\*------------------*/
 
 	let numberA = isNaN(a),
 	numberB = isNaN(b),
@@ -21,9 +23,18 @@ function average(a, b) {
 	} else {
 		result = (numberA) ? "Number A is not a number" : "Number B is not a number" 
 	}
-
-	console.log(result);
+	console.log(numberA);
+	return result;
 }
 
 
-average(100, "50");
+function getDataForm1 () {
+
+	let numbera = parseFloat(document.getElementById('a1').value);
+	let numberb = parseFloat(document.getElementById('b1').value);
+	let response = average(numbera, numberb);
+	setResponseForm(response)
+}
+
+
+export default getDataForm1;

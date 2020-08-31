@@ -34,11 +34,6 @@ body{
   cursor: pointer;
 }
 
-.form{
-  display: flex;
-  flex-direction: column;
-}
-
 .form--input{
   padding: 16px;
   border: 1px solid transparent;
@@ -59,4 +54,18 @@ body{
 .form--btn:hover{
   background-color: rgb(197, 197, 197);
   color: white;
+}
+
+.hide{
+  display: none;
+}
+
+.show{
+  display: flex;
+  flex-direction: column;
+}
+
+#response{
+  text-align: center;
+  font-size: 3rem;
 }

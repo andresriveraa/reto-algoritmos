@@ -18,15 +18,35 @@
     </ul>
   </nav>
   <main class="app">
-    <div class="form" id="form">
-      <input id="a" type="number" class="form--input"
-      placeholder="Number1">
-      <input id="b" type="number" class="form--input"
-      placeholder="Number2">
-      <input id="operator" type="text" class="form--input">
-      <button onclick="renderInput()" class="form--btn">Calculate</button>
+    <div class=" show" id="form1">
+      <p>Dame dos numeros y te daré el promedio</p>
+      <input id="a1" type="number" class="form--input"
+      placeholder="Number 1">
+      <input id="b1" type="number" class="form--input"
+      placeholder="Number 2">
+      <button id="button1" class="form--btn">Calculate</button>
     </div>
-    <p>sdd</p>
+    <div class=" hide" id="form2">
+      <input id="a2" type="number" class="form--input"
+      placeholder="Number1">
+      <input id="b2" type="number" class="form--input"
+      placeholder="Number2">
+      <input id="operator2" type="text" class="form--input">
+      <button class="form--btn">Calculate</button>
+    </div>
+    <div class="hide" id="form3">
+      <input id="a3" type="number" class="form--input"
+      placeholder="Number1">
+      <input id="b3" type="number" class="form--input"
+      placeholder="Number3">
+      <input id="operato3r" type="text" class="form--input">
+      <button class="form--btn">Calculate</button>
+    </div>
+
+    <div class="modal">
+      <h1>Tu respuesta:</h1>
+      <p id="response"></p>
+    </div>
   </main>
   <script type="module" src="./javascript/index.js"></script>
 </body>
